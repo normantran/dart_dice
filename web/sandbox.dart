@@ -28,7 +28,15 @@ void AddDiceButtonPressed(MouseEvent event)
     window.alert("Please enter the number of sides for this dice.");
   else
   {
-    int numSides = int.parse(numDiceTextBox.value);
+    int numSides;
+    try {
+      numSides = int.parse(numDiceTextBox.value);
+    }
+    on FormatException {
+      window.alert("Number of sides for dice is not valid");
+      return;
+    }
+    
     Dice d = new Dice(numSides);
     var newLI = new LIElement();
     newLI.text = "d" + numSides.toString();
