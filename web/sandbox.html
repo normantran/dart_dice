@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sandbox</title>
+    <link rel="stylesheet" href="sandbox.css">
+  </head>
+  <body>
+    <h1>Sandbox</h1>
+    
+    <p>Hello world from Dart!</p>
+    
+    <div id="roll_container">
+      <p>Fate awaits.</p>
+      
+      
+      <h2>Dice</h2>
+      <input type="number" id="dice_side_num" min="2" value="6">
+      <button id="add_dice_button">+</button>
+      <button id="remove_dice_button">Clear Dice</button>
+      <button id="roll_button">Roll</button>
+      <ul id="dice_list"></ul>
+
+      <h2>Results</h2>
+      <button id="clear_button">Clear</button>
+      <ul id="results_list"></ul>
+    </div>
+
+    <script type="application/dart" src="sandbox.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
