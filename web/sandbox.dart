@@ -45,7 +45,7 @@ void AddDiceButtonPressed(MouseEvent event)
     deleteBtn.onClick.listen(RemoveSingleDiceButtonPressed);
     newLI.children.add(deleteBtn);
     diceUList.children.add(newLI);
-    diceMap = { newLI : d };
+    diceMap[newLI] = d;
   }
 }
 
