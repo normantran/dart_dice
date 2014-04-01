@@ -71,11 +71,22 @@ void RollButtonPressed(MouseEvent event)
   var newLI = new LIElement();
   var range = new Random();
   int rolledTotal = 0;
+  int count = 1;
+  String rollBreakdown = "";
+  int numDice = diceMap.length;
   diceMap.forEach((li, dice) { 
     int rolled = dice.Roll();
     rolledTotal += rolled;
+    rollBreakdown += rolled.toString();
+    if(count < numDice)
+      rollBreakdown += " + ";
+    else
+      rollBreakdown += " = ";
+    count++;
   });
-  newLI.text = rolledTotal.toString();
+  
+  rollBreakdown += rolledTotal.toString();
+  newLI.text = rollBreakdown;
   resultsUList.children.add(newLI);
 }
 
