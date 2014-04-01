@@ -7,26 +7,26 @@
     <link rel="stylesheet" href="sandbox.css">
   </head>
   <body>
-    <h1>Sandbox</h1>
-    
-    <p>Hello world from Dart!</p>
-    
-    <div id="roll_container">
-      <p>Fate awaits.</p>
-      
-      
-      <h2>Dice</h2>
-      <input type="number" id="dice_side_num" min="2" value="6">
-      <button id="add_dice_button">+</button>
-      <button id="remove_dice_button">Clear Dice</button>
-      <button id="roll_button">Roll</button>
-      <ul id="dice_list"></ul>
-
-      <h2>Results</h2>
-      <button id="clear_button">Clear</button>
-      <ul id="results_list"></ul>
-    </div>
-
+    <main>
+      <header>
+        <h1>Dice Roller</h1>
+        <p>Fate awaits.</p>
+      </header>
+      <div id="roll_container" class="box_content">
+        <h2>Dice</h2>
+        <input type="number" id="dice_side_num" min="2" value="6">
+        <button id="add_dice_button">+</button>
+        <br />
+        <button id="remove_dice_button">Clear Dice</button>
+        <button id="roll_button">Roll</button>
+        <ul id="dice_list"></ul>
+      </div>  
+      <div id="results_container" class="box_content">
+        <h2>Results</h2>
+        <button id="clear_button">Clear</button>
+        <ul id="results_list"></ul>
+      </div>
+    </main>
     <script type="application/dart" src="sandbox.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>
